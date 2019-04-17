@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
+        sender.pulsate()
     }
     
 
