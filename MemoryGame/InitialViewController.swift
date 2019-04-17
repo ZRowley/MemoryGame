@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // new stuff
+    
     @IBOutlet weak var memoryGameLabel: UILabel!
     
     override func viewDidLoad() {
