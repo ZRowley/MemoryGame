@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="-785" y="71"/>
         </scene>
-        <!--View Controller-->
+        <!--Color Game View Controller-->
         <scene sceneID="MSR-NI-V5Q">
             <objects>
-                <viewController id="03p-b6-tCF" customClass="ViewController" customModule="MemoryGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="03p-b6-tCF" customClass="ColorGameViewController" customModule="MemoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QJz-Nu-y89">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +123,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="olZ-lW-cAb"/>
                     </view>
+                    <connections>
+                        <outlet property="changingColorWord" destination="daE-qo-kIc" id="Bqe-DI-wMD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hik-NY-yIa" sceneMemberID="firstResponder"/>
                 <exit id="HdI-Rt-qWM" userLabel="Exit" sceneMemberID="exit"/>

@@ -17,6 +17,8 @@ class ColorGameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var changingColorWord: UILabel!
+    
     @IBAction func blueButtonPressed(_ sender: UIButton) {
     }
     @IBAction func redButtonPressed(_ sender: UIButton) {
