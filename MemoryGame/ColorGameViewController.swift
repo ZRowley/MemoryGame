@@ -17,25 +17,46 @@ class ColorGameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-   func setWordColor()
-   {
-    let randomInt = Int.random(in: 0..<3)
-    if randomInt == 0
+    func setWordText()
     {
-        changingColorWord = .blue
+        let randomInt = Int.random(in: 0...3)
+        if randomInt == 0
+        {
+            changingColorWord.text = "BLUE"
+        }
+        if randomInt == 1
+        {
+            changingColorWord.text = "RED"
+        }
+        if randomInt == 2
+        {
+            changingColorWord.text = "GREEN"
+        }
+        if randomInt == 3
+        {
+            changingColorWord.text = "YELLOW"
+        }
     }
-    if randomInt == 1
+    
+    func setWordColor()
     {
-        changingColorWord = .red
-    }
-    if randomInt == 2
-    {
-        changingColorWord = .green
-    }
-    if randomInt == 3
-    {
-        changingColorWord = .yellow
-    }
+        let randomInt = Int.random(in: 0...3)
+        if randomInt == 0
+        {
+            changingColorWord.textColor = UIColor.red
+        }
+        if randomInt == 1
+        {
+            changingColorWord.textColor = UIColor.blue
+        }
+        if randomInt == 2
+        {
+            changingColorWord.textColor = UIColor.green
+        }
+        if randomInt == 3
+        {
+            changingColorWord.textColor = UIColor.yellow
+        }
     }
     
     @IBAction func blueButtonPressed(_ sender: UIButton) {
