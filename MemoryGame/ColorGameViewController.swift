@@ -10,6 +10,7 @@ import UIKit
 
 class ColorGameViewController: UIViewController {
     
+    @IBOutlet weak var changingColorWord: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,13 +60,26 @@ class ColorGameViewController: UIViewController {
         }
     }
     
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+        setWordText()
+        setWordColor()
+    }
+    
     @IBAction func blueButtonPressed(_ sender: UIButton) {
+        setWordText()
+        setWordColor()
     }
     @IBAction func redButtonPressed(_ sender: UIButton) {
+        setWordText()
+        setWordColor()
     }
     @IBAction func greenButtonPressed(_ sender: UIButton) {
+        setWordText()
+        setWordColor()
     }
     @IBAction func yellowButtonPressed(_ sender: UIButton) {
+        setWordText()
+        setWordColor()
     }
 
 }

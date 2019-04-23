@@ -119,12 +119,23 @@
                                 <color key="textColor" red="0.2185667013" green="0.4906380575" blue="0.70968264250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-i0-Ecl">
+                                <rect key="frame" x="157" y="115" width="60" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="1" green="0.42167449689999997" blue="0.24472192200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="03p-b6-tCF" eventType="touchUpInside" id="6XI-51-BiE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="olZ-lW-cAb"/>
                     </view>
                     <connections>
-                        <outlet property="changingColorWord" destination="daE-qo-kIc" id="Bqe-DI-wMD"/>
+                        <outlet property="changingColorWord" destination="daE-qo-kIc" id="5c6-6n-FxI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hik-NY-yIa" sceneMemberID="firstResponder"/>
