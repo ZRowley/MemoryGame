@@ -13,8 +13,8 @@ class ColorGameViewController: UIViewController {
     @IBOutlet weak var changingColorWord: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
-    var score = 0
-    let wordColorRandomInt = Int.random(in: 0...3)
+    var rightScore = 0
+    var wrongScore = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +44,7 @@ class ColorGameViewController: UIViewController {
     
     func setWordColor()
     {
+        let wordColorRandomInt = Int.random(in: 0...3)
         if wordColorRandomInt == 0
         {
             changingColorWord.textColor = UIColor.red
@@ -62,25 +63,67 @@ class ColorGameViewController: UIViewController {
         }
     }
     
-   // @IBAction func startButtonPressed(_ sender: UIButton) {
-  //      setWordText()
-  //      setWordColor()
-//    }
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+       setWordText()
+        setWordColor()
+    }
     
     @IBAction func blueButtonPressed(_ sender: UIButton) {
+        if changingColorWord.textColor == UIColor.blue
+        {
+            rightScore += 1
+            rightLabel.text = String(rightScore)
+        }
+        else
+        {
+            wrongScore += 1
+            wrongLabel.text = String(wrongScore)
+        }
         setWordText()
         setWordColor()
 }
             
     @IBAction func redButtonPressed(_ sender: UIButton) {
+        if changingColorWord.textColor == UIColor.red
+        {
+            rightScore += 1
+            rightLabel.text = String(rightScore)
+        }
+        else
+        {
+            wrongScore += 1
+            wrongLabel.text = String(wrongScore)
+        }
         setWordText()
         setWordColor()
     }
+    
     @IBAction func greenButtonPressed(_ sender: UIButton) {
+       if changingColorWord.textColor == UIColor.green
+        {
+            rightScore += 1
+            rightLabel.text = String(rightScore)
+        }
+        else
+        {
+            wrongScore += 1
+            wrongLabel.text = String(wrongScore)
+        }
         setWordText()
         setWordColor()
     }
+    
     @IBAction func yellowButtonPressed(_ sender: UIButton) {
+       if changingColorWord.textColor == UIColor.yellow
+        {
+            rightScore += 1
+            rightLabel.text = String(rightScore)
+        }
+        else
+        {
+            wrongScore += 1
+            wrongLabel.text = String(wrongScore)
+        }
         setWordText()
         setWordColor()
     }
