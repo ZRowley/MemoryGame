@@ -11,10 +11,13 @@ import UIKit
 class ColorGameViewController: UIViewController {
     
     @IBOutlet weak var changingColorWord: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
+    @IBOutlet weak var wrongLabel: UILabel!
+    var score = 0
+    let wordColorRandomInt = Int.random(in: 0...3)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -41,34 +44,34 @@ class ColorGameViewController: UIViewController {
     
     func setWordColor()
     {
-        let randomInt = Int.random(in: 0...3)
-        if randomInt == 0
+        if wordColorRandomInt == 0
         {
             changingColorWord.textColor = UIColor.red
         }
-        if randomInt == 1
+        if wordColorRandomInt == 1
         {
             changingColorWord.textColor = UIColor.blue
         }
-        if randomInt == 2
+        if wordColorRandomInt == 2
         {
             changingColorWord.textColor = UIColor.green
         }
-        if randomInt == 3
+        if wordColorRandomInt == 3
         {
             changingColorWord.textColor = UIColor.yellow
         }
     }
     
-    @IBAction func startButtonPressed(_ sender: UIButton) {
-        setWordText()
-        setWordColor()
-    }
+   // @IBAction func startButtonPressed(_ sender: UIButton) {
+  //      setWordText()
+  //      setWordColor()
+//    }
     
     @IBAction func blueButtonPressed(_ sender: UIButton) {
         setWordText()
         setWordColor()
-    }
+}
+            
     @IBAction func redButtonPressed(_ sender: UIButton) {
         setWordText()
         setWordColor()
@@ -81,5 +84,5 @@ class ColorGameViewController: UIViewController {
         setWordText()
         setWordColor()
     }
-
+    
 }
