@@ -15,10 +15,32 @@ class ColorGameViewController: UIViewController {
     @IBOutlet weak var wrongLabel: UILabel!
     var rightScore = 0
     var wrongScore = 0
+    var gameOver = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        changingColorWord.alpha = 0
         // Do any additional setup after loading the view.
+    }
+    
+    func youWin(message: String){
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Reset", style: .default) {
+            (action) in
+            self.resetGame()
+        }
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
+        gameOver = true
+    }
+    
+    func resetGame () {
+        if rightScore == 10{
+        rightScore = 0
+        wrongScore = 0
+        gameOver = false
+        }
     }
     
     func setWordText()
@@ -66,6 +88,7 @@ class ColorGameViewController: UIViewController {
     @IBAction func startButtonPressed(_ sender: UIButton) {
        setWordText()
        setWordColor()
+       changingColorWord.alpha = 1
     }
     
     @IBAction func blueButtonPressed(_ sender: Any) {
