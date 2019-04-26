@@ -65,10 +65,10 @@ class ColorGameViewController: UIViewController {
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
        setWordText()
-        setWordColor()
+       setWordColor()
     }
     
-    @IBAction func blueButtonPressed(_ sender: UIButton) {
+    @IBAction func blueButtonPressed(_ sender: Any) {
         if changingColorWord.textColor == UIColor.blue
         {
             rightScore += 1
@@ -81,9 +81,10 @@ class ColorGameViewController: UIViewController {
         }
         setWordText()
         setWordColor()
-}
+    }
+    
             
-    @IBAction func redButtonPressed(_ sender: UIButton) {
+    @IBAction func redButtonPressed(_ sender: Any) {
         if changingColorWord.textColor == UIColor.red
         {
             rightScore += 1
@@ -96,10 +97,12 @@ class ColorGameViewController: UIViewController {
         }
         setWordText()
         setWordColor()
+    
     }
     
-    @IBAction func greenButtonPressed(_ sender: UIButton) {
-       if changingColorWord.textColor == UIColor.green
+    
+    @IBAction func greenButtonPressed(_ sender: Any) {
+        if changingColorWord.textColor == UIColor.green
         {
             rightScore += 1
             rightLabel.text = String(rightScore)
@@ -113,8 +116,8 @@ class ColorGameViewController: UIViewController {
         setWordColor()
     }
     
-    @IBAction func yellowButtonPressed(_ sender: UIButton) {
-       if changingColorWord.textColor == UIColor.yellow
+    @IBAction func yellowButtonPressed(_ sender: Any) {
+        if changingColorWord.textColor == UIColor.yellow
         {
             rightScore += 1
             rightLabel.text = String(rightScore)
@@ -127,5 +130,4 @@ class ColorGameViewController: UIViewController {
         setWordText()
         setWordColor()
     }
-    
 }

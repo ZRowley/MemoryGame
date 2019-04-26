@@ -73,6 +73,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="blueButtonPressed:" destination="03p-b6-tCF" eventType="touchUpInside" id="PxC-kk-Kce"/>
                                     <action selector="blueButtonPressed:" destination="HdI-Rt-qWM" eventType="touchUpInside" id="RLc-fX-hPl"/>
                                 </connections>
                             </button>
@@ -86,6 +87,7 @@
                                 </state>
                                 <connections>
                                     <action selector="greenButtonPressed:" destination="HdI-Rt-qWM" eventType="touchUpInside" id="2De-wY-j7a"/>
+                                    <action selector="greenButtonPressed:" destination="03p-b6-tCF" eventType="touchUpInside" id="ZOh-SM-Z5V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unk-sV-gcu">
@@ -97,6 +99,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="redButtonPressed:" destination="03p-b6-tCF" eventType="touchUpInside" id="GRR-aT-vcT"/>
                                     <action selector="redButtonPressed:" destination="HdI-Rt-qWM" eventType="touchUpInside" id="Qn6-cU-Fb0"/>
                                 </connections>
                             </button>
@@ -110,6 +113,7 @@
                                 </state>
                                 <connections>
                                     <action selector="yellowButtonPressed:" destination="HdI-Rt-qWM" eventType="touchUpInside" id="kKN-qD-6FL"/>
+                                    <action selector="yellowButtonPressed:" destination="03p-b6-tCF" eventType="touchUpInside" id="zIP-yN-PPI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daE-qo-kIc">
