@@ -14,6 +14,7 @@
 		4579C3122260F96500EABAA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4579C3102260F96500EABAA4 /* LaunchScreen.storyboard */; };
 		4588AEE422678DA300D4A319 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4588AEE322678DA300D4A319 /* ButtonClass.swift */; };
 		BF2CC96F2264E9A000F3F141 /* ColorGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CC96E2264E9A000F3F141 /* ColorGameViewController.swift */; };
+		BF6D325B227A05BE00AB846F /* MemoryGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D325A227A05BE00AB846F /* MemoryGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4579C3132260F96500EABAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4588AEE322678DA300D4A319 /* ButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
 		BF2CC96E2264E9A000F3F141 /* ColorGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGameViewController.swift; sourceTree = "<group>"; };
+		BF6D325A227A05BE00AB846F /* MemoryGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				4579C3072260F96300EABAA4 /* AppDelegate.swift */,
 				4579C30B2260F96300EABAA4 /* Main.storyboard */,
+				BF6D325A227A05BE00AB846F /* MemoryGameViewController.swift */,
 				4579C3092260F96300EABAA4 /* InitialViewController.swift */,
 				BF2CC96E2264E9A000F3F141 /* ColorGameViewController.swift */,
 				4588AEE322678DA300D4A319 /* ButtonClass.swift */,
@@ -145,6 +148,7 @@
 				BF2CC96F2264E9A000F3F141 /* ColorGameViewController.swift in Sources */,
 				4588AEE422678DA300D4A319 /* ButtonClass.swift in Sources */,
 				4579C3082260F96300EABAA4 /* AppDelegate.swift in Sources */,
+				BF6D325B227A05BE00AB846F /* MemoryGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
