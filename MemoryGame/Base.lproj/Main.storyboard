@@ -232,6 +232,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-s2-dXF">
+                                <rect key="frame" x="125" y="319" width="124" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.42167449689999997" blue="0.24472192200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -268,13 +275,14 @@
                     <connections>
                         <outlet property="changingColorWord" destination="daE-qo-kIc" id="5c6-6n-FxI"/>
                         <outlet property="rightLabel" destination="olv-Sf-n0I" id="hSU-Jg-lsp"/>
+                        <outlet property="timerLabel" destination="ScM-s2-dXF" id="eXC-Ia-PO4"/>
                         <outlet property="wrongLabel" destination="QWI-QI-DEx" id="wFV-pW-gE0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hik-NY-yIa" sceneMemberID="firstResponder"/>
                 <exit id="HdI-Rt-qWM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="54" y="448"/>
+            <point key="canvasLocation" x="53.600000000000001" y="447.52623688155927"/>
         </scene>
         <!--Memory Game View Controller-->
         <scene sceneID="MCL-xI-cVz">
@@ -284,7 +292,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CARD FLIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfb-xc-nM0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MATCHING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfb-xc-nM0">
                                 <rect key="frame" x="29" y="50" width="316" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="316" id="xUJ-OK-Odc"/>
@@ -294,14 +302,52 @@
                                 <color key="textColor" red="1" green="0.42167449689999997" blue="0.24472192200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-q5-JlA">
+                                <rect key="frame" x="49" y="158" width="68" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZW-N2-fr9">
+                                <rect key="frame" x="150" y="158" width="68" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-dA-3fu">
+                                <rect key="frame" x="257" y="158" width="68" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5AF-gX-kcB">
+                                <rect key="frame" x="150" y="255" width="68" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOU-Tm-e0y">
+                                <rect key="frame" x="257" y="255" width="68" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lo-AA-IGQ">
+                                <rect key="frame" x="49" y="255" width="68" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="by4-wf-HI5"/>
                     </view>
+                    <connections>
+                        <outlet property="box1" destination="G9p-q5-JlA" id="P8Q-qj-ilL"/>
+                        <outlet property="box2" destination="DZW-N2-fr9" id="Ku2-66-Jp5"/>
+                        <outlet property="box3" destination="Rd5-dA-3fu" id="uHL-6h-ry4"/>
+                        <outlet property="box4" destination="9lo-AA-IGQ" id="RWy-TW-vmw"/>
+                        <outlet property="box5" destination="5AF-gX-kcB" id="DM8-ld-Yhb"/>
+                        <outlet property="box6" destination="LOU-Tm-e0y" id="VR7-AH-b80"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kju-oL-I7j" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="-256"/>
+            <point key="canvasLocation" x="53.600000000000001" y="-256.82158920539734"/>
         </scene>
     </scenes>
 </document>
