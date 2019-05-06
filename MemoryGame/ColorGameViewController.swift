@@ -14,10 +14,16 @@ class ColorGameViewController: UIViewController {
     @IBOutlet weak var changingColorWord: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
+    @objc func UpdateTimer() {
+        time = time + 1.0
+        timerLabel.text = String(format: "%.1f", time)
+    }
     var rightScore = 0
     var wrongScore = 0
     var gameOver = false
-
+    var time = 0.0
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,10 +43,8 @@ class ColorGameViewController: UIViewController {
     }
     
     func resetGame () {
-        if rightScore == 10{
-        rightScore = 0
-        wrongScore = 0
-        gameOver = false
+        if time == 10.0 {
+            
         }
     }
     
@@ -87,9 +91,10 @@ class ColorGameViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-       setWordText()
-       setWordColor()
-       changingColorWord.alpha = 1
+        setWordText()
+        setWordColor()
+        changingColorWord.alpha = 1
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
     }
     
     @IBAction func blueButtonPressed(_ sender: Any) {
@@ -107,7 +112,11 @@ class ColorGameViewController: UIViewController {
         setWordColor()
     }
     
-            
+    func timeAction(){
+        time += 1
+        timerLabel.text = String(time)
+    }
+    
     @IBAction func redButtonPressed(_ sender: Any) {
         if changingColorWord.textColor == UIColor.red
         {
@@ -121,7 +130,7 @@ class ColorGameViewController: UIViewController {
         }
         setWordText()
         setWordColor()
-    
+        
     }
     
     
