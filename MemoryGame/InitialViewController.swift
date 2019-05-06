@@ -25,12 +25,8 @@ class ViewController: UIViewController {
     @IBAction func colorGameButtonPressed(_ sender: UIButton) {
     }
     
-    @IBAction func cardFlipButtonPressed(_ sender: UIButton) {
+    @IBAction func matchingGameButtonPressedd(_ sender: UIButton) {
+    }
     }
     
-    
-
-
-    
-}
 

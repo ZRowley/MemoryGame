@@ -10,6 +10,7 @@ import UIKit
 
 class ColorGameViewController: UIViewController {
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var changingColorWord: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
