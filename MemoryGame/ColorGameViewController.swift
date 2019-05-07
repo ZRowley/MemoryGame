@@ -43,9 +43,9 @@ class ColorGameViewController: UIViewController {
     }
     
     func resetGame () {
-        if time == 10.0 {
-            
-        }
+        rightScore = 0
+        wrongScore = 0
+        gameOver = false
     }
     
     func setWordText()
@@ -162,5 +162,11 @@ class ColorGameViewController: UIViewController {
         }
         setWordText()
         setWordColor()
+    }
+    
+    func winGame() {
+        if time == 10.0{
+            youWin(message: "You Win!!")
+        }
     }
 }
