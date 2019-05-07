@@ -16,11 +16,15 @@ class MemoryGameViewController: UIViewController {
     @IBOutlet weak var box4: UIView!
     @IBOutlet weak var box5: UIView!
     @IBOutlet weak var box6: UIView!
+    
+    @IBOutlet weak var timerLabel: UILabel!
 
+    var timeLeft = 6
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     func setBox1Colors()
@@ -203,14 +207,31 @@ class MemoryGameViewController: UIViewController {
         }
     }
     
-    @IBAction func startButtonPressed(_ sender: UIButton) {
+    @objc func onTimerFires()
+    {
+        timeLeft -= 1
+        timerLabel.text = "\(timeLeft) seconds left"
         
+        if timeLeft <= 0 {
+            timer.invalidate()
+            box1.backgroundColor = UIColor.black
+            box2.backgroundColor = UIColor.black
+            box3.backgroundColor = UIColor.black
+            box4.backgroundColor = UIColor.black
+            box5.backgroundColor = UIColor.black
+            box6.backgroundColor = UIColor.black
+            
+        }
+    }
+    
+    @IBAction func startButtonPressed(_ sender: UIButton) {
         setBox1Colors()
         setBox2Colors()
         setBox3Colors()
         setBox4Colors()
         setBox5Colors()
         setBox6Colors()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
     
 }
