@@ -124,8 +124,8 @@
                                 <color key="textColor" red="0.2185667013" green="0.4906380575" blue="0.70968264250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-i0-Ecl">
-                                <rect key="frame" x="122.5" y="148" width="130" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-i0-Ecl">
+                                <rect key="frame" x="122" y="124" width="130" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gsn-0b-CnX"/>
                                     <constraint firstAttribute="width" constant="130" id="v6Z-6G-Yxv"/>
@@ -250,6 +250,21 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="1Yf-Ls-WQm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-Co-8eI">
+                                <rect key="frame" x="155" y="581" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="removeDirections:" destination="03p-b6-tCF" eventType="touchUpInside" id="5N9-1v-8Np"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Directions: To play the game press start and get ten " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ey4-PM-xLx">
+                                <rect key="frame" x="29" y="172" width="316" height="461"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -285,6 +300,8 @@
                     </view>
                     <connections>
                         <outlet property="changingColorWord" destination="daE-qo-kIc" id="5c6-6n-FxI"/>
+                        <outlet property="deleteDirectionsButton" destination="fkC-Co-8eI" id="C9a-pL-hnj"/>
+                        <outlet property="directionsLabel" destination="ey4-PM-xLx" id="Ynp-UF-rLq"/>
                         <outlet property="rightLabel" destination="olv-Sf-n0I" id="hSU-Jg-lsp"/>
                         <outlet property="timerLabel" destination="ScM-s2-dXF" id="eXC-Ia-PO4"/>
                         <outlet property="wrongLabel" destination="QWI-QI-DEx" id="wFV-pW-gE0"/>
@@ -439,6 +456,13 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="9xE-Nm-t3b"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fta-Jy-KHU">
+                                <rect key="frame" x="142" y="141" width="90" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.60858565409999998" green="0.056519327430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -468,6 +492,7 @@
                         <outlet property="box4" destination="9lo-AA-IGQ" id="RWy-TW-vmw"/>
                         <outlet property="box5" destination="5AF-gX-kcB" id="DM8-ld-Yhb"/>
                         <outlet property="box6" destination="LOU-Tm-e0y" id="VR7-AH-b80"/>
+                        <outlet property="timerLabel" destination="Fta-Jy-KHU" id="ZXZ-17-N5Y"/>
                     </connections>
                 </viewController>
             </objects>
@@ -475,6 +500,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Yf-Ls-WQm"/>
+        <segue reference="9xE-Nm-t3b"/>
     </inferredMetricsTieBreakers>
 </document>
