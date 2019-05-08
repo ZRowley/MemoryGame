@@ -17,6 +17,21 @@ class MemoryGameViewController: UIViewController {
     @IBOutlet weak var box5: UIView!
     @IBOutlet weak var box6: UIView!
     
+    @IBOutlet weak var redBox: UIView!
+    @IBOutlet weak var orangeBox: UIView!
+    @IBOutlet weak var yellowBox: UIView!
+    @IBOutlet weak var greenBox: UIView!
+    @IBOutlet weak var blueBox: UIView!
+    @IBOutlet weak var purpleBox: UIView!
+    
+    @IBOutlet var redBoxDragged: UIPanGestureRecognizer!
+    @IBOutlet var orangeBoxDragged: UIPanGestureRecognizer!
+    @IBOutlet var yellowBoxDragged: UIPanGestureRecognizer!
+    @IBOutlet var greenBoxDragged: UIPanGestureRecognizer!
+    @IBOutlet var blueBoxDragged: UIPanGestureRecognizer!
+    @IBOutlet var purpleBoxDragged: UIPanGestureRecognizer!
+    
+    
     @IBOutlet weak var timerLabel: UILabel!
 
     var timeLeft = 6
@@ -233,5 +248,7 @@ class MemoryGameViewController: UIViewController {
         setBox6Colors()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
+    
+    
     
 }
