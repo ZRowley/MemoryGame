@@ -484,6 +484,61 @@
                                     <action selector="startButtonPressed:" destination="yfR-1S-zlD" eventType="touchUpInside" id="v58-Ln-3PF"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJv-aL-oPu">
+                                <rect key="frame" x="18" y="502" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1043915102" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yW4-b4-iy8" appends="YES" id="Uag-Ru-UTv"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAZ-cv-bgd">
+                                <rect key="frame" x="135" y="502" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99956367239999999" green="1" blue="0.21795845589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FYZ-0S-mYQ" appends="YES" id="DHu-LX-AHq"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EW3-gx-Jkb">
+                                <rect key="frame" x="197" y="502" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25531164340000001" green="0.77793069950000004" blue="0.21147084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="y7z-oy-I7g" appends="YES" id="B2x-LE-q92"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqh-ba-zyE">
+                                <rect key="frame" x="257" y="502" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DvP-1K-4TJ" appends="YES" id="eDA-4H-SOZ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-JC-NaE">
+                                <rect key="frame" x="319" y="502" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.55926785207581875" green="0.065759411092863984" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DKh-nF-elT" appends="YES" id="p8M-Kd-RZu"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v41-Ps-TtT">
+                                <rect key="frame" x="75" y="502" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.42167449689999997" blue="0.24472192200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Mq7-fM-0zS" appends="YES" id="SNg-Kh-jt2"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -517,17 +572,35 @@
                         <viewLayoutGuide key="safeArea" id="by4-wf-HI5"/>
                     </view>
                     <connections>
+                        <outlet property="blueBox" destination="yqh-ba-zyE" id="ktL-GX-ygh"/>
+                        <outlet property="blueBoxDragged" destination="DvP-1K-4TJ" id="mpP-N3-6M6"/>
                         <outlet property="box1" destination="G9p-q5-JlA" id="P8Q-qj-ilL"/>
                         <outlet property="box2" destination="DZW-N2-fr9" id="Ku2-66-Jp5"/>
                         <outlet property="box3" destination="Rd5-dA-3fu" id="uHL-6h-ry4"/>
                         <outlet property="box4" destination="9lo-AA-IGQ" id="RWy-TW-vmw"/>
                         <outlet property="box5" destination="5AF-gX-kcB" id="DM8-ld-Yhb"/>
                         <outlet property="box6" destination="LOU-Tm-e0y" id="VR7-AH-b80"/>
+                        <outlet property="greenBox" destination="EW3-gx-Jkb" id="RCJ-Fu-ruS"/>
+                        <outlet property="greenBoxDragged" destination="y7z-oy-I7g" id="s4B-kE-4fa"/>
+                        <outlet property="orangeBox" destination="v41-Ps-TtT" id="aCT-nR-R0Z"/>
+                        <outlet property="orangeBoxDragged" destination="Mq7-fM-0zS" id="hn8-Fv-1zs"/>
+                        <outlet property="purpleBox" destination="9aK-JC-NaE" id="ctA-N3-eZ1"/>
+                        <outlet property="purpleBoxDragged" destination="DKh-nF-elT" id="DHr-OK-waq"/>
+                        <outlet property="redBox" destination="wJv-aL-oPu" id="5Av-Bg-MBb"/>
+                        <outlet property="redBoxDragged" destination="yW4-b4-iy8" id="6iN-cN-isD"/>
                         <outlet property="timerLabel" destination="Fta-Jy-KHU" id="wy3-RM-ChY"/>
+                        <outlet property="yellowBox" destination="RAZ-cv-bgd" id="P7D-md-27g"/>
+                        <outlet property="yellowBoxDragged" destination="FYZ-0S-mYQ" id="TvJ-fe-8eA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kju-oL-I7j" sceneMemberID="firstResponder"/>
                 <exit id="4XA-V1-U0R" userLabel="Exit" sceneMemberID="exit"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="yW4-b4-iy8"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Mq7-fM-0zS"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="FYZ-0S-mYQ"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="y7z-oy-I7g"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="DvP-1K-4TJ"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="DKh-nF-elT"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="-256.82158920539734"/>
         </scene>
