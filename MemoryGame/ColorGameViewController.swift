@@ -17,18 +17,33 @@ class ColorGameViewController: UIViewController {
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
     @objc func UpdateTimer() {
-        time = time + 1.0
-        timerLabel.text = String(format: "%.1f", time)
+        time += 1
+        timerLabel.text = "\(time)"
+        
+        if time >= 10 {
+            timer.invalidate()
+            time = 0
+            timerLabel.alpha = 0
+            youWin(message: "You Loose!!")
+        }
     }
-    var rightScore = 0
-    var wrongScore = 0
-    var gameOver = false
-    var time = 0.0
+    var rightScore = 0 {
+        didSet {
+            if rightScore == 10 {
+                timerLabel.alpha = 0
+                youWin(message: "You Win!!")
+            }
+        }
+    }
+    
+    var wrongScore = 0 
+    
+    var time = 0
     var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        timerLabel.alpha = 0
         changingColorWord.alpha = 0
         // Do any additional setup after loading the view.
     }
@@ -41,13 +56,13 @@ class ColorGameViewController: UIViewController {
         }
         alert.addAction(alertAction)
         present(alert, animated: true, completion: nil)
-        gameOver = true
     }
     
     func resetGame () {
         rightScore = 0
+        rightLabel.text = String(rightScore)
         wrongScore = 0
-        gameOver = false
+        wrongLabel.text = String(wrongScore)
     }
     
     func setWordText()
@@ -96,7 +111,9 @@ class ColorGameViewController: UIViewController {
         setWordText()
         setWordColor()
         changingColorWord.alpha = 1
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+        timerLabel.alpha = 1
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+        time = 0
     }
     
     @IBAction func blueButtonPressed(_ sender: Any) {
@@ -132,7 +149,6 @@ class ColorGameViewController: UIViewController {
         }
         setWordText()
         setWordColor()
-        
     }
     
     
@@ -166,16 +182,8 @@ class ColorGameViewController: UIViewController {
         setWordColor()
     }
     
-    func winGame() {
-        if time == 10.0{
-            youWin(message: "You Win!!")
-        }
-    }
-    
     @IBAction func removeDirections(_ sender: Any) {
         directionsLabel.alpha = 0
         deleteDirectionsButton.alpha = 0
     }
-    
-    
 }
