@@ -22,6 +22,7 @@ class ColorGameViewController: UIViewController {
         
         if time >= 10 {
             timer.invalidate()
+            time = 0
             timerLabel.alpha = 0
             youWin(message: "You Loose!!")
         }
@@ -35,7 +36,15 @@ class ColorGameViewController: UIViewController {
         }
     }
     
-    var wrongScore = 0
+    var wrongScore = 0 {
+    didSet {
+    if wrongScore == 10 {
+    timerLabel.alpha = 0
+    youWin(message: "You Loose!!")
+            }
+        }
+    }
+    
     var time = 0
     var timer = Timer()
     
