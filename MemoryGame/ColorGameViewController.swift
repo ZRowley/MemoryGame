@@ -36,14 +36,7 @@ class ColorGameViewController: UIViewController {
         }
     }
     
-    var wrongScore = 0 {
-    didSet {
-    if wrongScore == 10 {
-    timerLabel.alpha = 0
-    youWin(message: "You Loose!!")
-            }
-        }
-    }
+    var wrongScore = 0 
     
     var time = 0
     var timer = Timer()
