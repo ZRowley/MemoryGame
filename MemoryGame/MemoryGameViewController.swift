@@ -17,14 +17,21 @@ class MemoryGameViewController: UIViewController {
     @IBOutlet weak var box5: UIView!
     @IBOutlet weak var box6: UIView!
     
- 
-    
     @IBOutlet weak var questionOneLabel: UILabel!
     @IBOutlet weak var questionTwoLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var questionThreeLabel: UILabel!
+    @IBOutlet weak var questionFourLabel: UILabel!
+    @IBOutlet weak var questionFiveLabel: UILabel!
+    @IBOutlet weak var questionSixLabel: UILabel!
     
     @IBOutlet weak var segmentedControlOne: UISegmentedControl!
     @IBOutlet weak var segmentedControlTwo: UISegmentedControl!
+    @IBOutlet weak var segmentedControlThree: UISegmentedControl!
+    @IBOutlet weak var segmentedControlFour: UISegmentedControl!
+    @IBOutlet weak var segmentedControlFive: UISegmentedControl!
+    @IBOutlet weak var segmentedControlSix: UISegmentedControl!
+    
     
     var timeLeft = 6
     var timer = Timer()
@@ -244,6 +251,9 @@ class MemoryGameViewController: UIViewController {
     
     func questions()
     {
+       
+        
+        
         
     }
     
