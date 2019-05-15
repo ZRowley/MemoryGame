@@ -17,23 +17,15 @@ class MemoryGameViewController: UIViewController {
     @IBOutlet weak var box5: UIView!
     @IBOutlet weak var box6: UIView!
     
-    @IBOutlet weak var redBox: UIView!
-    @IBOutlet weak var orangeBox: UIView!
-    @IBOutlet weak var yellowBox: UIView!
-    @IBOutlet weak var greenBox: UIView!
-    @IBOutlet weak var blueBox: UIView!
-    @IBOutlet weak var purpleBox: UIView!
+ 
     
-    @IBOutlet var redBoxDragged: UIPanGestureRecognizer!
-    @IBOutlet var orangeBoxDragged: UIPanGestureRecognizer!
-    @IBOutlet var yellowBoxDragged: UIPanGestureRecognizer!
-    @IBOutlet var greenBoxDragged: UIPanGestureRecognizer!
-    @IBOutlet var blueBoxDragged: UIPanGestureRecognizer!
-    @IBOutlet var purpleBoxDragged: UIPanGestureRecognizer!
-    
-    
+    @IBOutlet weak var questionOneLabel: UILabel!
+    @IBOutlet weak var questionTwoLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
-
+    
+    @IBOutlet weak var segmentedControlOne: UISegmentedControl!
+    @IBOutlet weak var segmentedControlTwo: UISegmentedControl!
+    
     var timeLeft = 6
     var timer = Timer()
     
@@ -41,6 +33,7 @@ class MemoryGameViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
     
     func setBox1Colors()
     {
@@ -249,34 +242,11 @@ class MemoryGameViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
     
-    @IBAction func redButtonDrag(_ sender: UIPanGestureRecognizer) {
-        let location = sender.location(in: view)
-        redBox.center = location
+    func questions()
+    {
+        
     }
     
-    @IBAction func orangeButtonDrag(_ sender: UIPanGestureRecognizer) {
-        let location = sender.location(in: view)
-        orangeBox.center = location
-    }
     
-    @IBAction func yellowButtonDrag(_ sender: UIPanGestureRecognizer) {
-        let location = sender.location(in: view)
-        yellowBox.center = location
-    }
-    
-    @IBAction func greenButtonDrag(_ sender: UIPanGestureRecognizer) {
-        let location = sender.location(in: view)
-        greenBox.center = location
-    }
-    
-    @IBAction func blueButtonDrag(_ sender: UIPanGestureRecognizer) {
-        let location = sender.location(in: view)
-        blueBox.center = location
-    }
-    
-    @IBAction func purpleButtonDrag(_ sender: UIPanGestureRecognizer) {
-        let location = sender.location(in: view)
-        purpleBox.center = location
-    }
     
 }
