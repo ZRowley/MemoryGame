@@ -13,6 +13,7 @@ class ColorGameViewController: UIViewController {
     @IBOutlet weak var deleteDirectionsButton: UIButton!
     @IBOutlet weak var directionsLabel: UITextView!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var deleteStartButton: UIButton!
     @IBOutlet weak var changingColorWord: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
@@ -24,19 +25,34 @@ class ColorGameViewController: UIViewController {
             timer.invalidate()
             time = 0
             timerLabel.alpha = 0
+            changingColorWord.alpha = 0
+            deleteStartButton.alpha = 1
             youWin(message: "You Loose!!")
         }
     }
     var rightScore = 0 {
         didSet {
             if rightScore == 10 {
+                timer.invalidate()
                 timerLabel.alpha = 0
+                changingColorWord.alpha = 0
+                deleteStartButton.alpha = 1
                 youWin(message: "You Win!!")
             }
         }
     }
     
-    var wrongScore = 0 
+    var wrongScore = 0 {
+        didSet {
+            if wrongScore == 5 {
+                timer.invalidate()
+                timerLabel.alpha = 0
+                changingColorWord.alpha = 0
+                deleteStartButton.alpha = 1
+                youWin(message: "You Loose!!")
+            }
+        }
+    }
     
     var time = 0
     var timer = Timer()
@@ -106,13 +122,17 @@ class ColorGameViewController: UIViewController {
             changingColorWord.textColor = UIColor.yellow
         }
     }
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+    }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         setWordText()
         setWordColor()
         changingColorWord.alpha = 1
+        deleteStartButton.alpha = 0
         timerLabel.alpha = 1
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+        startTimer()
         time = 0
     }
     

@@ -249,6 +249,34 @@ class MemoryGameViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
     
+    @IBAction func redButtonDrag(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: view)
+        redBox.center = location
+    }
     
+    @IBAction func orangeButtonDrag(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: view)
+        orangeBox.center = location
+    }
+    
+    @IBAction func yellowButtonDrag(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: view)
+        yellowBox.center = location
+    }
+    
+    @IBAction func greenButtonDrag(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: view)
+        greenBox.center = location
+    }
+    
+    @IBAction func blueButtonDrag(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: view)
+        blueBox.center = location
+    }
+    
+    @IBAction func purpleButtonDrag(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: view)
+        purpleBox.center = location
+    }
     
 }
