@@ -651,6 +651,12 @@
                         <outlet property="box4" destination="9lo-AA-IGQ" id="RWy-TW-vmw"/>
                         <outlet property="box5" destination="5AF-gX-kcB" id="DM8-ld-Yhb"/>
                         <outlet property="box6" destination="LOU-Tm-e0y" id="VR7-AH-b80"/>
+                        <outlet property="colorButton1" destination="jrh-gV-12A" id="cNX-uT-92h"/>
+                        <outlet property="colorButton2" destination="l65-U2-idG" id="B9f-5h-71q"/>
+                        <outlet property="colorButton3" destination="quv-LD-ix7" id="EBt-I0-hkT"/>
+                        <outlet property="colorButton4" destination="q39-6t-XJE" id="HEz-im-Osf"/>
+                        <outlet property="colorButton5" destination="dwj-yE-azm" id="gdW-ho-p1M"/>
+                        <outlet property="colorButton6" destination="2GL-ZT-exf" id="JvH-A9-f6P"/>
                         <outlet property="questionFiveLabel" destination="VLp-6s-1wJ" id="cDl-tZ-7oS"/>
                         <outlet property="questionFourLabel" destination="9uU-iR-9c2" id="1Fy-Tg-emr"/>
                         <outlet property="questionOneLabel" destination="fSO-R4-6zm" id="vXu-AK-eTs"/>
@@ -669,6 +675,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Yf-Ls-WQm"/>
+        <segue reference="9xE-Nm-t3b"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,13 @@ class MemoryGameViewController: UIViewController {
     @IBOutlet weak var box5: UIView!
     @IBOutlet weak var box6: UIView!
     
+    @IBOutlet weak var colorButton1: UISegmentedControl!
+    @IBOutlet weak var colorButton2: UISegmentedControl!
+    @IBOutlet weak var colorButton3: UISegmentedControl!
+    @IBOutlet weak var colorButton4: UISegmentedControl!
+    @IBOutlet weak var colorButton5: UISegmentedControl!
+    @IBOutlet weak var colorButton6: UISegmentedControl!
+    
     @IBOutlet weak var questionOneLabel: UILabel!
     @IBOutlet weak var questionTwoLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
@@ -51,7 +58,12 @@ class MemoryGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    //    colorButton1.alpha = 0
+    //    colorButton2.alpha = 0
+    //    colorButton3.alpha = 0
+    //    colorButton4.alpha = 0
+    //    colorButton5.alpha = 0
+   //     colorButton6.alpha = 0
     }
     
     
@@ -250,6 +262,13 @@ class MemoryGameViewController: UIViewController {
             box5.alpha = 0
             box6.alpha = 0
             
+    //        colorButton1.alpha = 1
+    //        colorButton2.alpha = 1
+    //        colorButton3.alpha = 1
+    //        colorButton4.alpha = 1
+    //        colorButton5.alpha = 1
+    //        colorButton6.alpha = 1
+            
         }
     }
     
@@ -260,6 +279,7 @@ class MemoryGameViewController: UIViewController {
         setBox4Colors()
         setBox5Colors()
         setBox6Colors()
+
         box1.alpha = 1
         box2.alpha = 1
         box3.alpha = 1
