@@ -25,14 +25,10 @@ class MemoryGameViewController: UIViewController {
     @IBOutlet weak var questionFiveLabel: UILabel!
     @IBOutlet weak var questionSixLabel: UILabel!
     
-    @IBOutlet weak var segmentedControlOne: UISegmentedControl!
-    @IBOutlet weak var segmentedControlTwo: UISegmentedControl!
-    @IBOutlet weak var segmentedControlThree: UISegmentedControl!
-    @IBOutlet weak var segmentedControlFour: UISegmentedControl!
-    @IBOutlet weak var segmentedControlFive: UISegmentedControl!
-    @IBOutlet weak var segmentedControlSix: UISegmentedControl!
+    @IBOutlet weak var rightLabel: UILabel!
     
     
+    var countRight = 0
     var timeLeft = 6
     var timer = Timer()
     
@@ -256,14 +252,47 @@ class MemoryGameViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
     
-    func questions()
-    {
-       
+    @IBAction func segmentedControl1Selected(_ sender: UISegmentedControl) {
         
-        
-        
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            if box1.backgroundColor == UIColor.red
+            {
+                countRight += 1
+            }
+        case 1:
+            if box1.backgroundColor == UIColor.orange
+            {
+                countRight += 1
+            }
+        case 2:
+            if box1.backgroundColor == UIColor.yellow
+            {
+                countRight += 1
+            }
+        case 3:
+            if box1.backgroundColor == UIColor.green
+            {
+                countRight += 1
+            }
+        case 4:
+            if box1.backgroundColor == UIColor.blue
+            {
+                countRight += 1
+            }
+        case 5:
+            if box1.backgroundColor == UIColor.purple
+            {
+                countRight += 1
+            }
+        default:
+            countRight = 0
+        }
     }
     
+
     
+
     
 }

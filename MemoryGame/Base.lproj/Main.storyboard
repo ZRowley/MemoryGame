@@ -496,6 +496,9 @@
                                     <segment title="Blue"/>
                                     <segment title="Purple"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControl1Selected:" destination="yfR-1S-zlD" eventType="valueChanged" id="ehd-UP-teV"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Color is Box 2?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtQ-e1-8mQ">
                                 <rect key="frame" x="67" y="340" width="238" height="21"/>
@@ -590,6 +593,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Right Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkX-fq-Qwk">
+                                <rect key="frame" x="16" y="76" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="2GL-ZT-exf">
                                 <rect key="frame" x="28" y="623" width="317" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -647,6 +657,7 @@
                         <outlet property="questionSixLabel" destination="gYJ-4t-aUT" id="vWa-g8-S5I"/>
                         <outlet property="questionThreeLabel" destination="mVa-AM-dCp" id="kGa-j2-jUS"/>
                         <outlet property="questionTwoLabel" destination="VtQ-e1-8mQ" id="jqN-d6-bk6"/>
+                        <outlet property="rightLabel" destination="AkX-fq-Qwk" id="X5F-CM-Mpx"/>
                         <outlet property="segmentedControlFive" destination="dwj-yE-azm" id="E7B-rk-vqE"/>
                         <outlet property="segmentedControlFour" destination="q39-6t-XJE" id="sjC-Yd-FjO"/>
                         <outlet property="segmentedControlOne" destination="jrh-gV-12A" id="KOh-ID-yWZ"/>
