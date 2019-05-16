@@ -228,13 +228,14 @@ class MemoryGameViewController: UIViewController {
         timerLabel.text = "\(timeLeft) seconds left"
         
         if timeLeft <= 0 {
+            timeLeft = 6
             timer.invalidate()
-            box1.backgroundColor = UIColor.black
-            box2.backgroundColor = UIColor.black
-            box3.backgroundColor = UIColor.black
-            box4.backgroundColor = UIColor.black
-            box5.backgroundColor = UIColor.black
-            box6.backgroundColor = UIColor.black
+            box1.alpha = 0
+            box2.alpha = 0
+            box3.alpha = 0
+            box4.alpha = 0
+            box5.alpha = 0
+            box6.alpha = 0
             
         }
     }
@@ -246,6 +247,12 @@ class MemoryGameViewController: UIViewController {
         setBox4Colors()
         setBox5Colors()
         setBox6Colors()
+        box1.alpha = 1
+        box2.alpha = 1
+        box3.alpha = 1
+        box4.alpha = 1
+        box5.alpha = 1
+        box6.alpha = 1
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
     
