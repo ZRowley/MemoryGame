@@ -333,43 +333,43 @@ class MemoryGameViewController: UIViewController {
     }
     
     @IBAction func segmentedController3Pressed(_ sender: UISegmentedControl){
-    switch sender.selectedSegmentIndex
-    {
-    case 0:
-    if box3.backgroundColor == UIColor.red
-    {
-    countRight += 1
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            if box3.backgroundColor == UIColor.red
+            {
+                countRight += 1
+            }
+        case 1:
+            if box3.backgroundColor == UIColor.orange
+            {
+                countRight += 1
+            }
+        case 2:
+            if box3.backgroundColor == UIColor.yellow
+            {
+                countRight += 1
+            }
+        case 3:
+            if box3.backgroundColor == UIColor.green
+            {
+                countRight += 1
+            }
+        case 4:
+            if box3.backgroundColor == UIColor.blue
+            {
+                countRight += 1
+            }
+        case 5:
+            if box3.backgroundColor == UIColor.purple
+            {
+                countRight += 1
+            }
+        default:
+            countRight = 0
+        }
+        rightLabel.text = String(countRight)
     }
-    case 1:
-    if box3.backgroundColor == UIColor.orange
-    {
-    countRight += 1
-    }
-    case 2:
-    if box3.backgroundColor == UIColor.yellow
-    {
-    countRight += 1
-    }
-    case 3:
-    if box3.backgroundColor == UIColor.green
-    {
-    countRight += 1
-    }
-    case 4:
-    if box3.backgroundColor == UIColor.blue
-    {
-    countRight += 1
-    }
-    case 5:
-    if box3.backgroundColor == UIColor.purple
-    {
-    countRight += 1
-    }
-    default:
-    countRight = 0
-    }
-    rightLabel.text = String(countRight)
-}
     
     @IBAction func segmentedController4Pressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex
@@ -489,4 +489,19 @@ class MemoryGameViewController: UIViewController {
         rightLabel.text = String(countRight)
     }
     
+    func youWin(message: String){
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Reset", style: .default) {
+            (action) in
+            self.resetGame()
+        }
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func resetGame() {
+        countRight = 0
+        rightLabel.text = String(countRight)
+    }
 }
+
