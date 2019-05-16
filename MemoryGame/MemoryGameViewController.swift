@@ -28,7 +28,14 @@ class MemoryGameViewController: UIViewController {
     @IBOutlet weak var rightLabel: UILabel!
     
     
-    var countRight = 0
+    var countRight = 0 {
+        didSet {
+            if countRight == 6 {
+                youWin(message: "You Win!!")
+            }
+        }
+    }
+    
     var timeLeft = 6
     var timer = Timer()
     
