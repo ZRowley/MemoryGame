@@ -54,33 +54,31 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-xh-7o7">
-                                <rect key="frame" x="58" y="457" width="259" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kds-vW-Nfg">
+                                <rect key="frame" x="72" y="438" width="231" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="601-Fp-u5m"/>
-                                    <constraint firstAttribute="height" constant="48" id="aB8-H5-GVs"/>
-                                    <constraint firstAttribute="width" constant="175" id="fxz-rC-tms"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="233" id="gMv-TC-cdf"/>
+                                    <constraint firstAttribute="width" constant="231" id="AHa-sS-v9N"/>
+                                    <constraint firstAttribute="height" constant="48" id="gjj-9v-cLI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="33"/>
-                                <state key="normal" title="MATCHING GAME">
+                                <state key="normal" title="NUMBER GAME">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="colorGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t7Q-cf-pOp"/>
-                                    <action selector="matchingGameButtonPressedd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Chf-gl-sKX"/>
-                                    <segue destination="yfR-1S-zlD" kind="show" id="jaE-vC-NkD"/>
+                                    <action selector="colorGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7Q-Db-hyH"/>
+                                    <action selector="numberGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBD-zV-0zB"/>
+                                    <segue destination="yfR-1S-zlD" kind="show" id="G2A-88-wOy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4yY-Vv-tdw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gzj-um-R4u"/>
-                            <constraint firstItem="ACe-xh-7o7" firstAttribute="top" secondItem="4yY-Vv-tdw" secondAttribute="bottom" constant="72" id="Oag-dO-gcR"/>
+                            <constraint firstItem="Kds-vW-Nfg" firstAttribute="centerX" secondItem="4yY-Vv-tdw" secondAttribute="centerX" id="LQt-mh-LE4"/>
                             <constraint firstItem="xzD-3b-gG4" firstAttribute="top" secondItem="gMr-tw-J5I" secondAttribute="bottom" constant="1" id="TK8-QO-Cf0"/>
                             <constraint firstItem="4yY-Vv-tdw" firstAttribute="top" secondItem="xzD-3b-gG4" secondAttribute="bottom" constant="91" id="UGz-w9-1J9"/>
-                            <constraint firstItem="ACe-xh-7o7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZj-Wh-XSm"/>
+                            <constraint firstItem="Kds-vW-Nfg" firstAttribute="top" secondItem="4yY-Vv-tdw" secondAttribute="bottom" constant="53" id="ejs-6x-Gw1"/>
                             <constraint firstItem="gMr-tw-J5I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="149" id="mkH-Fb-KTX"/>
                             <constraint firstItem="xzD-3b-gG4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oHy-h6-ili"/>
                             <constraint firstItem="gMr-tw-J5I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w3R-mH-VvV"/>
@@ -518,6 +516,9 @@
                                     <segment title="Blue"/>
                                     <segment title="Purple"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedController2Pressed:" destination="yfR-1S-zlD" eventType="valueChanged" id="PUK-Sh-3v8"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="quv-LD-ix7">
                                 <rect key="frame" x="28" y="428" width="317" height="29"/>
@@ -530,6 +531,9 @@
                                     <segment title="Blue"/>
                                     <segment title="Purple"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedController3Pressed:" destination="yfR-1S-zlD" eventType="valueChanged" id="czN-cI-Hb6"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Color is Box 3?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVa-AM-dCp">
                                 <rect key="frame" x="64" y="405" width="238" height="21"/>
@@ -563,6 +567,9 @@
                                     <segment title="Blue"/>
                                     <segment title="Purple"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedController4Pressed:" destination="yfR-1S-zlD" eventType="valueChanged" id="9sn-zV-dRU"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="dwj-yE-azm">
                                 <rect key="frame" x="28" y="558" width="317" height="29"/>
@@ -575,6 +582,9 @@
                                     <segment title="Blue"/>
                                     <segment title="Purple"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedController5Pressed:" destination="yfR-1S-zlD" eventType="valueChanged" id="A6v-4K-Gza"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fta-Jy-KHU">
                                 <rect key="frame" x="110" y="72" width="153" height="51"/>
@@ -611,6 +621,9 @@
                                     <segment title="Blue"/>
                                     <segment title="Purple"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedController6Pressed:" destination="yfR-1S-zlD" eventType="valueChanged" id="eHA-QU-tLi"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -658,19 +671,13 @@
                         <outlet property="questionThreeLabel" destination="mVa-AM-dCp" id="kGa-j2-jUS"/>
                         <outlet property="questionTwoLabel" destination="VtQ-e1-8mQ" id="jqN-d6-bk6"/>
                         <outlet property="rightLabel" destination="AkX-fq-Qwk" id="X5F-CM-Mpx"/>
-                        <outlet property="segmentedControlFive" destination="dwj-yE-azm" id="E7B-rk-vqE"/>
-                        <outlet property="segmentedControlFour" destination="q39-6t-XJE" id="sjC-Yd-FjO"/>
-                        <outlet property="segmentedControlOne" destination="jrh-gV-12A" id="KOh-ID-yWZ"/>
-                        <outlet property="segmentedControlSix" destination="2GL-ZT-exf" id="LfH-xJ-kQI"/>
-                        <outlet property="segmentedControlThree" destination="quv-LD-ix7" id="sSs-ov-jxo"/>
-                        <outlet property="segmentedControlTwo" destination="l65-U2-idG" id="52A-Wz-LkG"/>
                         <outlet property="timerLabel" destination="Fta-Jy-KHU" id="wy3-RM-ChY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kju-oL-I7j" sceneMemberID="firstResponder"/>
                 <exit id="4XA-V1-U0R" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="-256.82158920539734"/>
+            <point key="canvasLocation" x="79" y="-314"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

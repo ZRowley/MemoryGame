@@ -289,10 +289,204 @@ class MemoryGameViewController: UIViewController {
         default:
             countRight = 0
         }
+        rightLabel.text = String(countRight)
     }
     
-
     
-
+    @IBAction func segmentedController2Pressed(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            if box2.backgroundColor == UIColor.red
+            {
+                countRight += 1
+            }
+        case 1:
+            if box2.backgroundColor == UIColor.orange
+            {
+                countRight += 1
+            }
+        case 2:
+            if box2.backgroundColor == UIColor.yellow
+            {
+                countRight += 1
+            }
+        case 3:
+            if box2.backgroundColor == UIColor.green
+            {
+                countRight += 1
+            }
+        case 4:
+            if box2.backgroundColor == UIColor.blue
+            {
+                countRight += 1
+            }
+        case 5:
+            if box2.backgroundColor == UIColor.purple
+            {
+                countRight += 1
+            }
+        default:
+            countRight = 0
+        }
+        rightLabel.text = String(countRight)
+    }
+    
+    @IBAction func segmentedController3Pressed(_ sender: UISegmentedControl){
+    switch sender.selectedSegmentIndex
+    {
+    case 0:
+    if box3.backgroundColor == UIColor.red
+    {
+    countRight += 1
+    }
+    case 1:
+    if box3.backgroundColor == UIColor.orange
+    {
+    countRight += 1
+    }
+    case 2:
+    if box3.backgroundColor == UIColor.yellow
+    {
+    countRight += 1
+    }
+    case 3:
+    if box3.backgroundColor == UIColor.green
+    {
+    countRight += 1
+    }
+    case 4:
+    if box3.backgroundColor == UIColor.blue
+    {
+    countRight += 1
+    }
+    case 5:
+    if box3.backgroundColor == UIColor.purple
+    {
+    countRight += 1
+    }
+    default:
+    countRight = 0
+    }
+    rightLabel.text = String(countRight)
+}
+    
+    @IBAction func segmentedController4Pressed(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            if box4.backgroundColor == UIColor.red
+            {
+                countRight += 1
+            }
+        case 1:
+            if box4.backgroundColor == UIColor.orange
+            {
+                countRight += 1
+            }
+        case 2:
+            if box4.backgroundColor == UIColor.yellow
+            {
+                countRight += 1
+            }
+        case 3:
+            if box4.backgroundColor == UIColor.green
+            {
+                countRight += 1
+            }
+        case 4:
+            if box4.backgroundColor == UIColor.blue
+            {
+                countRight += 1
+            }
+        case 5:
+            if box4.backgroundColor == UIColor.purple
+            {
+                countRight += 1
+            }
+        default:
+            countRight = 0
+        }
+        rightLabel.text = String(countRight)
+    }
+    
+    
+    @IBAction func segmentedController5Pressed(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            if box5.backgroundColor == UIColor.red
+            {
+                countRight += 1
+            }
+        case 1:
+            if box5.backgroundColor == UIColor.orange
+            {
+                countRight += 1
+            }
+        case 2:
+            if box5.backgroundColor == UIColor.yellow
+            {
+                countRight += 1
+            }
+        case 3:
+            if box5.backgroundColor == UIColor.green
+            {
+                countRight += 1
+            }
+        case 4:
+            if box5.backgroundColor == UIColor.blue
+            {
+                countRight += 1
+            }
+        case 5:
+            if box5.backgroundColor == UIColor.purple
+            {
+                countRight += 1
+            }
+        default:
+            countRight = 0
+        }
+        rightLabel.text = String(countRight)
+    }
+    
+    @IBAction func segmentedController6Pressed(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            if box6.backgroundColor == UIColor.red
+            {
+                countRight += 1
+            }
+        case 1:
+            if box6.backgroundColor == UIColor.orange
+            {
+                countRight += 1
+            }
+        case 2:
+            if box6.backgroundColor == UIColor.yellow
+            {
+                countRight += 1
+            }
+        case 3:
+            if box6.backgroundColor == UIColor.green
+            {
+                countRight += 1
+            }
+        case 4:
+            if box6.backgroundColor == UIColor.blue
+            {
+                countRight += 1
+            }
+        case 5:
+            if box6.backgroundColor == UIColor.purple
+            {
+                countRight += 1
+            }
+        default:
+            countRight = 0
+        }
+        rightLabel.text = String(countRight)
+    }
     
 }
