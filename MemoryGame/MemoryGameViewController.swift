@@ -46,7 +46,7 @@ class MemoryGameViewController: UIViewController {
     
     var countWrong = 0 {
         didSet {
-            if countWrong == 3 {
+            if countWrong == 1 {
                 youWin(message: "You Loose!!")
             }
         }
@@ -58,12 +58,12 @@ class MemoryGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    //    colorButton1.alpha = 0
-    //    colorButton2.alpha = 0
-    //    colorButton3.alpha = 0
-    //    colorButton4.alpha = 0
-    //    colorButton5.alpha = 0
-   //     colorButton6.alpha = 0
+        colorButton1.alpha = 0
+        colorButton2.alpha = 0
+        colorButton3.alpha = 0
+        colorButton4.alpha = 0
+        colorButton5.alpha = 0
+        colorButton6.alpha = 0
     }
     
     
@@ -262,12 +262,12 @@ class MemoryGameViewController: UIViewController {
             box5.alpha = 0
             box6.alpha = 0
             
-    //        colorButton1.alpha = 1
-    //        colorButton2.alpha = 1
-    //        colorButton3.alpha = 1
-    //        colorButton4.alpha = 1
-    //        colorButton5.alpha = 1
-    //        colorButton6.alpha = 1
+            colorButton1.alpha = 1
+           colorButton2.alpha = 1
+            colorButton3.alpha = 1
+            colorButton4.alpha = 1
+            colorButton5.alpha = 1
+            colorButton6.alpha = 1
             
         }
     }

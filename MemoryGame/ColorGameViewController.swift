@@ -11,7 +11,6 @@ import UIKit
 class ColorGameViewController: UIViewController {
     
     @IBOutlet weak var deleteDirectionsButton: UIButton!
-    @IBOutlet weak var directionsLabel: UITextView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var deleteStartButton: UIButton!
     @IBOutlet weak var changingColorWord: UILabel!
@@ -202,8 +201,4 @@ class ColorGameViewController: UIViewController {
         setWordColor()
     }
     
-    @IBAction func removeDirections(_ sender: Any) {
-        directionsLabel.alpha = 0
-        deleteDirectionsButton.alpha = 0
-    }
 }
