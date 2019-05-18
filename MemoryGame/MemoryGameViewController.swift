@@ -661,6 +661,18 @@ class MemoryGameViewController: UIViewController {
         countWrong = 0
         rightLabel.text = String(countRight)
         wrongLabel.text = String(countWrong)
+        colorButton1.selectedSegmentIndex = UISegmentedControl.noSegment
+        colorButton2.selectedSegmentIndex = UISegmentedControl.noSegment
+        colorButton3.selectedSegmentIndex = UISegmentedControl.noSegment
+        colorButton4.selectedSegmentIndex = UISegmentedControl.noSegment
+        colorButton5.selectedSegmentIndex = UISegmentedControl.noSegment
+        colorButton6.selectedSegmentIndex = UISegmentedControl.noSegment
+        colorButton1.alpha = 0
+        colorButton2.alpha = 0
+        colorButton3.alpha = 0
+        colorButton4.alpha = 0
+        colorButton5.alpha = 0
+        colorButton6.alpha = 0
     }
 }
 
