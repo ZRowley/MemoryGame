@@ -263,7 +263,7 @@ class MemoryGameViewController: UIViewController {
             box6.alpha = 0
             
             colorButton1.alpha = 1
-           colorButton2.alpha = 1
+            colorButton2.alpha = 1
             colorButton3.alpha = 1
             colorButton4.alpha = 1
             colorButton5.alpha = 1
@@ -345,8 +345,8 @@ class MemoryGameViewController: UIViewController {
             countRight = 0
             countWrong = 0
         }
-        rightLabel.text = String(countRight)
-        wrongLabel.text = String(countWrong)
+        rightLabel.text = "Right Score \(countRight)"
+        wrongLabel.text = "Wrong Score \(countWrong)"
     }
     
     
@@ -405,8 +405,8 @@ class MemoryGameViewController: UIViewController {
             countRight = 0
             countWrong = 0
         }
-        rightLabel.text = String(countRight)
-        wrongLabel.text = String(countWrong)
+        rightLabel.text = "Right Score \(countRight)"
+        wrongLabel.text = "Wrong Score \(countWrong)"
     }
     
     @IBAction func segmentedController3Pressed(_ sender: UISegmentedControl){
@@ -464,8 +464,8 @@ class MemoryGameViewController: UIViewController {
             countRight = 0
             countWrong = 0
         }
-        rightLabel.text = String(countRight)
-        wrongLabel.text = String(countWrong)
+        rightLabel.text = "Right Score \(countRight)"
+        wrongLabel.text = "Wrong Score \(countWrong)"
     }
     
     @IBAction func segmentedController4Pressed(_ sender: UISegmentedControl) {
@@ -523,8 +523,8 @@ class MemoryGameViewController: UIViewController {
             countRight = 0
             countWrong = 0
         }
-        rightLabel.text = String(countRight)
-        wrongLabel.text = String(countWrong)
+        rightLabel.text = "Right Score \(countRight)"
+        wrongLabel.text = "Wrong Score \(countWrong)"
     }
     
     
@@ -583,8 +583,8 @@ class MemoryGameViewController: UIViewController {
             countRight = 0
             countWrong = 0
         }
-        rightLabel.text = String(countRight)
-        wrongLabel.text = String(countWrong)
+        rightLabel.text = "Right Score \(countRight)"
+        wrongLabel.text = "Wrong Score \(countWrong)"
     }
     
     @IBAction func segmentedController6Pressed(_ sender: UISegmentedControl) {
@@ -642,8 +642,8 @@ class MemoryGameViewController: UIViewController {
             countRight = 0
             countWrong = 0
         }
-        rightLabel.text = String(countRight)
-        wrongLabel.text = String(countWrong)
+        rightLabel.text = "Right Score \(countRight)"
+        wrongLabel.text = "Wrong Score \(countWrong)"
     }
     
     func youWin(message: String){
@@ -659,8 +659,8 @@ class MemoryGameViewController: UIViewController {
     func resetGame() {
         countRight = 0
         countWrong = 0
-        rightLabel.text = String(countRight)
-        wrongLabel.text = String(countWrong)
+        rightLabel.text = "Right Score \(countRight)"
+        wrongLabel.text = "Wrong Score \(countWrong)"
         colorButton1.selectedSegmentIndex = UISegmentedControl.noSegment
         colorButton2.selectedSegmentIndex = UISegmentedControl.noSegment
         colorButton3.selectedSegmentIndex = UISegmentedControl.noSegment
